@@ -8,7 +8,7 @@ function App() {
                     path="/"
                     element={
                         <div>
-                            <h1>Chat-App is running...</h1>
+                            <h1>Orbit is running...</h1>
                         </div>
                     }
                 />
