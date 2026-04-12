@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import MainLayout from "./layouts/MainLayout";
+
+import ChatPage from "./pages/ChatPage";
+
 function App() {
     return (
         <BrowserRouter>
@@ -12,6 +16,12 @@ function App() {
                         </div>
                     }
                 />
+                <Route path="/channels" element={<MainLayout />}>
+                    <Route
+                        path=":workspaceId/:channelId"
+                        element={<ChatPage />}
+                    />
+                </Route>
             </Routes>
         </BrowserRouter>
     );
